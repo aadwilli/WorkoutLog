@@ -3,6 +3,9 @@ var express = require('express');
 //calling the express function in the app variable
 var app = express();
 
+//importing the header file
+app.use(require('./middleware/headers'));
+
 app.use('/api/test', function(req, res){
 	res.send("Hello World");
 });
