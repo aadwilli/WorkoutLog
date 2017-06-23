@@ -9,7 +9,6 @@
   },
   "author": "aadwilli",
   "license": "ISC",
-  //only used in the dev phase
   "devDependencies": {
     "http-server": "^0.10.0"
   }
