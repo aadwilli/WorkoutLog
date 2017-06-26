@@ -37,8 +37,8 @@ sequelize.authenticate().then(
 	});
 //creates a table in postgres and matches the model we defined
 	User.sync()
-//This drops the table if need to do so. Leave commented for now
-//User.sync({force:true})
+//DANGER!!!!This drops the table if need to do so. Leave commented for now
+// User.sync({force:true});
 
 //telling the app to use bodyParser
 //parse data off incoming requests and turn it into JSON. 
@@ -57,7 +57,7 @@ app.post('/api/user', function(req, res){
 			function createSuccess(user){
 				res.json({
 					user: user,
-					message: 'create'
+					message: 'created'
 				})
 			},
 			function createError(err){
