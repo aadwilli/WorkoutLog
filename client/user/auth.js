@@ -18,17 +18,20 @@ $(function(){
 				type: "POST",
 				url: WorkoutLog.API_BASE + "user",
 				data: JSON.stringify( user ),
-				contentType: "application/json"
+				contentType: "application/JSON"
 			});
 			//signup done/fail
 			signup.done(function(data){
 				if(data.sessionToken) {
 					WorkoutLog.setAuthHeader(data.sessionToken);
+					console.log("Thanks for being my friend and signing up!");
+					console.log(data.sessionToken);
 				}
 
 				$("#signup-modal").modal("hide");
 				$(".disabled").removeClass("disabled");
 				$("#loginout").text("Logout");
+				console.log("Great job signing up!");
 				}).fail(function() {
 				$("#su_error").text("There was an issue with sign up").show();
 				});
