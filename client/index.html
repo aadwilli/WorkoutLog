@@ -17,7 +17,7 @@
 			<li><a href="#define" data-toggle="tab">Define</a></li>
 			<li><a href="#log" data-toggle="tab">Log</a></li>
 			<li><a href="#history" data-toggle="tab">View History</a></li>
-			<li><a href="#" id="testAPI">Test API</a></li>
+
 		</ul>
 		<div class="container">
 			<div class="tab-content">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 			<!-- DEFINITION -->
-				<div class="tab-pane" id="define">
+				<div class="tab-pane fade" id="define">
 					<h2>Define</h2>
 					<label for="def-description">Description</label>
 					<textarea class="form-control" id="def-description" rows="3"></textarea>
@@ -44,10 +44,10 @@
 					</select>
 					<button id="def-save" class="btn btn-primary">Save</button>
 				</div>
-				<div class="tab-pane" id="log">
+				<div class="tab-pane fade" id="log">
 					<h2>log!</h2>
 					<label>Result</label>
-					<input type="text" class="form-control" inputmode="log-result" />
+					<input type="text" class="form-control" id="log-result" />
 					<label>Workout Select: </label>
 					<select class="form-control" id="log-definition">
 					</select>
@@ -55,7 +55,7 @@
 					<textarea class="form-control" id="log-description" rows="3"></textarea>
 					<button id="log-save" class="btn btn-primary">Save</button>
 				</div>
-				<div class="tab-pane" id="history">
+				<div class="tab-pane fade" id="history">
 					<h2>History</h2>
 					<ul class="list-group" id="history-list">
 					</ul>
@@ -65,7 +65,6 @@
 		<div class="container">
 			<div class="tab-content">
 				<div class="tab-pane active" id="home">
-					<h2>Hello Workout Log!</h2>
 				</div>
 			</div>
 		</div>
